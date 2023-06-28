@@ -1,0 +1,46 @@
+**** Backend 
+
+- inside the backend folder create package.json file
+    npm init -y
+
+- install express. node modules for express will appear
+    npm install express
+
+-create index.js or server.js file
+
+//store the express module in the variable called express
+
+//call the express function and store it in the variable called app
+
+//listen for requests using port 4000
+//at the same time it will run a function that will log a message regarding the request
+
+- install nodemon globally and use it to run the node server
+
+- create a sample route to the the root and return a JSON message
+
+- use browser or postman to test
+
+- install dotenv
+    npm install dotenv
+
+- add .env file and assign the port or database credentials
+
+- add .gitignore file and prevent .env and node_modules to be to pushed to git
+
+- create new folder called routes. and create files for routing
+
+- const express = require('express'); on top of the page
+- const router = express.Router();
+
+- module.exports = router; on bottom of the page
+
+- add the routes on the route page. GET, POST, DELETE and PUT/PATCH
+
+- app.use(express.json()); add on server 
+
+- install mongoose
+
+- add mongodb string to .env file
+
+- const moongose = require('moongose'); on server
