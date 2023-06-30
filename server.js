@@ -7,6 +7,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const workoutRoute  = require('./routes/workoutRoute')
+const userRoute  = require('./routes/userRoute')
 
 //call the express function and store it in the variable called app
 const app = express(); 
@@ -40,6 +41,7 @@ app.use((req, res, next) => {
 
 //this attaches all of the workout routes to the app. it will be executed when the right path is accessed
 app.use('/api/workouts', workoutRoute);   
+app.use('/api/user', userRoute);   
 
 
 //CONNECT to DATABASE
