@@ -14,7 +14,22 @@ const workoutSchema = new Schema({
     load : {
         type: Number,
         required: true,
+    },
+    sets: {
+        type: Number,
+        required: true,
+    },
+    workoutType: {
+        type: String,
+        enum: ['A', 'B', 'C'],
+        required: true,
+        default: 'A',
+    },
+    user_id: {
+        type: String,
+        required: true, 
     }
+
 }, {timestamps: true})
 
 module.exports = mongoose.model('workout', workoutSchema);

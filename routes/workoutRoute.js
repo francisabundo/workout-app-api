@@ -7,9 +7,12 @@ const {
     deleteWorkout,
     updateWorkout,
 } = require('../controllers/workoutController');
+const requireAuth = require('../middleware/requireAuth');
 
 //store the express method called Router in the variable called router
 const router = express.Router();
+
+router.use(requireAuth);
 
 
 //ROUTES
