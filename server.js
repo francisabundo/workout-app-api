@@ -6,14 +6,17 @@ require('dotenv').config();
 //store the express module in the variable called express
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const workoutRoute  = require('./routes/workoutRoute')
 const userRoute  = require('./routes/userRoute')
+
 
 //call the express function and store it in the variable called app
 const app = express(); 
 
 
 //MIDDLEWARE:
+app.use(cors());
 
 //any request that comes in, it looks for any body or data and attaches it to the request object
 app.use(express.json());
